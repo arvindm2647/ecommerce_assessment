@@ -153,10 +153,10 @@ DB_HOST=localhost
 DB_PORT=5434
 DB_NAME=ecommerce_db
 DB_USER=postgres
-DB_PASSWORD=your_actual_password
+DB_PASSWORD=7447
 ```
 
-**Note:** Update `DB_PORT` and `DB_PASSWORD` with your actual PostgreSQL configuration.
+**Note:** Update `DB_PORT` and `7447` with your actual PostgreSQL configuration.
 
 ### 6. Verify PostgreSQL Connection
 
@@ -495,7 +495,7 @@ FROM funnel_counts;
 
 ## Airflow Orchestration (Bonus)
 
-### DAG: `ecommerce_etl_pipeline`
+### DAG: `ecommerce_etl`
 
 **Schedule:** Daily (`@daily`)
 
