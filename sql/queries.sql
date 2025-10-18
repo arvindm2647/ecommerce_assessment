@@ -98,33 +98,3 @@ SELECT
     ROUND(100.0 * purchases / NULLIF(page_views, 0), 2) AS conversion_rate_from_start
 FROM funnel_counts;
 
-
-
-
--- Query 5: User Order Summary
--- Total orders and revenue per user
-SELECT 
-    u.user_id,
-    u.full_name,
-    u.email,
-    COUNT(o.order_id) AS total_orders,
-    SUM(CASE WHEN o.status = 'paid' THEN o.total_amount ELSE 0 END) AS total_spent
-FROM users u
-LEFT JOIN orders o ON u.user_id = o.user_id
-GROUP BY u.user_id, u.full_name, u.email
-ORDER BY total_spent DESC;
-
-
--- Query 6: Product Performance by Category
--- Revenue and units sold by product category
-SELECT 
-    p.category,
-    COUNT(DISTINCT p.product_id) AS total_products,
-    SUM(oi.quantity) AS total_units_sold,
-    SUM(oi.quantity * oi.unit_price) AS total_revenue
-FROM products p
-JOIN order_items oi ON p.product_id = oi.product_id
-JOIN orders o ON oi.order_id = o.order_id
-WHERE o.status = 'paid'
-GROUP BY p.category
-ORDER BY total_revenue DESC;
