@@ -495,7 +495,7 @@ FROM funnel_counts;
 
 ## Airflow Orchestration (Bonus)
 
-### DAG: `ecommerce_etl_pipeline`
+### DAG: `ecommerce_etl`
 
 **Schedule:** Daily (`@daily`)
 
