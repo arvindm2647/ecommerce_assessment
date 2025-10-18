@@ -1,0 +1,17 @@
+Transaction ID: TXN001
+Customer: John Doe
+Amount: 299.99
+Status: Completed
+Timestamp: 2024-10-16T10:30:00
+
+Transaction ID: TXN002
+Customer: Jane Smith
+Amount: 450.50
+Status: Pending
+Timestamp: 2024-10-16T11:15:00
+
+Transaction ID: TXN003
+Customer: Bob Wilson
+Amount: 125.75
+Status: Completed
+Timestamp: 2024-10-16T12:00:00
