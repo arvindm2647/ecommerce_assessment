@@ -69,7 +69,7 @@ ecommerce-data-system/
 
 ---
 
-## 🛠️ Technologies Used
+##  Technologies Used
 
 - **Backend:** Python 3.10
 - **Web Framework:** Flask 3.0
