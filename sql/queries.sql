@@ -1,6 +1,3 @@
--- ============================================
--- SQL Queries for E-commerce Analytics
--- ============================================
 
 -- Query 1: Daily Revenue (Paid Orders)
 -- Total revenue grouped by day
