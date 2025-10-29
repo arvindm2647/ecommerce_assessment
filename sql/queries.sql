@@ -62,7 +62,7 @@ ORDER BY signup_day;
 
 
 -- Query 4: Order Funnel
--- From events, calculate counts and conversion rates through stages: page_view → add_to_cart → purchase
+-- From events, calculate counts and conversion rates through stages: page_view add_to_cart purchase
 WITH funnel_counts AS (
     SELECT 
         COUNT(CASE WHEN event_type = 'page_view' THEN 1 END) AS page_views,
