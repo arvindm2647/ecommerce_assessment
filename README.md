@@ -408,9 +408,11 @@ FROM products p
 JOIN order_items oi ON p.product_id = oi.product_id
 JOIN orders o ON oi.order_id = o.order_id
 WHERE o.status = 'paid'
+    AND o.order_date >= (SELECT MAX(order_date) - INTERVAL '7 days' FROM orders)
 GROUP BY p.product_id, p.product_name
 ORDER BY total_revenue DESC
 LIMIT 5;
+
 ```
 
 **Purpose:** Identify best-selling products by revenue.
