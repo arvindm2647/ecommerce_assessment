@@ -11,7 +11,7 @@ GROUP BY DATE(order_date)
 ORDER BY order_day DESC;
 
 
--- Query 2: Top 5 Products by Revenue (Last 7 Days)
+-- Query 2: Top 5 Products by Revenue 
 -- Return product ID, product name, total units, and total revenue
 SELECT 
     p.product_id,
@@ -22,7 +22,6 @@ FROM products p
 JOIN order_items oi ON p.product_id = oi.product_id
 JOIN orders o ON oi.order_id = o.order_id
 WHERE o.status = 'paid'
-    AND o.order_date >= CURRENT_DATE - INTERVAL '7 days'
 GROUP BY p.product_id, p.product_name
 ORDER BY total_revenue DESC
 LIMIT 5;
