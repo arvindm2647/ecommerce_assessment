@@ -11,7 +11,6 @@ GROUP BY DATE(order_date)
 ORDER BY order_day DESC;
 
 
--- Query 2: Top 5 Products by Revenue 
 -- Return product ID, product name, total units, and total revenue
 -- Query 2: Top 5 Products by Revenue (Last 7 Days of Available Data)
 SELECT 
